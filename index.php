@@ -1,23 +1,18 @@
 <?php 
-
-  $products = [
-    ['name' => 'red shell', 'price' => 5],
-    ['name' => 'shiny star', 'price' => 24],
-    ['name' => 'bronze star', 'price' => 21],
-    ['name' => 'silver palate', 'price' => 3],
-    ['name' => 'skeleton', 'price' => 10],
-    ['name' => 'golden rod', 'price' => 2],
-  ];
-  
-  foreach($products as $product) {
-    if($product['name'] === 'silver palate') {
-      break;
-    }
-    if($product['price'] > 10) {
-      continue;
-    }
-    echo $product['name'] . '<br>';
+  // Functions
+  function sayHello($name = 'mizan', $fromType = 'function') {
+    echo "Well,hello $name straight from the $fromType.";
   }
+
+  sayHello('raju');
+  
+  function formatProduct($product) {
+    // echo "{$product['name']} costs 💰{$product['price']} to buy <br>.";
+    return "{$product['name']} costs 💰{$product['price']} to buy <br>.";
+  }
+
+  $formated = formatProduct(['name' => 'gold star', 'price' => '20']);
+  // echo $formated;
 
   // echo use to print out code 
   // echo "My first PHP code in the browser.";
