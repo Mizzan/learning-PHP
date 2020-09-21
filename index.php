@@ -1,36 +1,34 @@
 <?php 
-  // Boolean & Comparisons
+  // Conditional Statements
+  // $price = 20;
 
-  // echo true; 1
-  // echo false; null
+  // if($price < 10) {
+  //   echo 'the condition is met';
+  // } else if($price < 30) {
+  //   echo 'the else if condition is met';
+  // } else {
+  //   echo 'condition not met';
+  // }
 
-  // numbers 
-  // echo 5 < 10;
 
-  // echo 5 > 10;
+
+  $products = [
+    ['name' => 'red shell', 'price' => 5],
+    ['name' => 'shiny star', 'price' => 24],
+    ['name' => 'bronze star', 'price' => 21],
+    ['name' => 'silver palate', 'price' => 3],
+    ['name' => 'skeleton', 'price' => 10],
+    ['name' => 'golden rod', 'price' => 2],
+  ];
   
-  // equality operator
-  // echo 5 == 5;
-  
-  // not operator
-  // echo 5 != 10;
-
-  // greater than operator
-  // echo 5 >= 2;
-
-  // less than operator
-  // echo 1 <= 2;
-  
-  // small letter is greater than capital letter
-  echo 'mario' > 'Adam';
-
-
-  // loose vs strict equal comparison
-
-  echo 5 === 5;
-  echo 4 === 5;
-
-
+  // foreach($products as $product) {
+    // if($product['price'] < 10 && $product['price'] > 2) {
+    //   echo $product['name'] . " - " . $product['price'] . '<br>';
+    // }
+    // if($product['price'] > 30 || $product['price'] < 10) {
+    //   echo $product['name'] . " - " . $product['price'] . '<br>';
+    // }
+  // }
 
   // echo use to print out code 
   // echo "My first PHP code in the browser.";
@@ -46,9 +44,18 @@
   <title>String</title>
 </head>
 <body>
-  <h1>Boolean & Comparisons</h1>
+  <h1>Conditional Statements</h1>
     
-    
+    <div>
+    <h3>Price less than 15</h3>
+      <ul>
+        <?php foreach($products as $product) { ?>
+          <?php if($product['price'] < 15) { ?>
+            <li><?php echo $product['name'] . ' - ' . $product['price'] ?></li>
+          <?php } ?>
+        <?php } ?>
+      </ul>
+    </div>
 
 </body>
 </html>
