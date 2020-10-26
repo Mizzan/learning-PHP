@@ -1,18 +1,42 @@
 <?php 
-  // Functions
-  function sayHello($name = 'mizan', $fromType = 'function') {
-    echo "Well,hello $name straight from the $fromType.";
+  // variable scope
+
+  // local vars 
+  function myFunc() {
+    $price = 10;
+    echo $price;
   }
 
-  sayHello('raju');
+  // myFunc();
+
+  function myFunc2($age) {
+    echo $age;
+  }
   
-  function formatProduct($product) {
-    // echo "{$product['name']} costs 💰{$product['price']} to buy <br>.";
-    return "{$product['name']} costs 💰{$product['price']} to buy <br>.";
+  // myFunc2(23);
+
+  // global variable 
+
+  // we access global variable using the global word putting it in first.
+
+  $name = "mario";
+  // function sayHello() {
+  //   global $name;
+  //   $name = 'yoshi';
+  //   echo "hello $name"; // it will print the "yoshi" because it sees the local variable first.
+  // }
+
+  // sayHello();
+  // echo $name; // it will print the yoshi as we have changed the value inside the function.
+
+  function sayBye(&$name) { // using & we are referencing the global vars
+    $name = 'wario'; // changing the vars value
+    echo "hello $name";
   }
 
-  $formated = formatProduct(['name' => 'gold star', 'price' => '20']);
-  // echo $formated;
+  sayBye($name);
+  echo $name;
+
 
   // echo use to print out code 
   // echo "My first PHP code in the browser.";
