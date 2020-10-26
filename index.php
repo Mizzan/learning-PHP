@@ -1,36 +1,32 @@
 <?php 
-  // string 
-  $stringOne = 'my email is ';
-  $stringTwo = 'noobinphp@gmail.com';
+  // Numbers ( integer, float) 
 
-  // concatinate the string
-  // echo $stringOne .  $stringTwo;
-
-
-  // concatinate with string
-  $name = 'Mizan';
-
-  // echo 'Hey, my name is ' . $name;
+  $radius = 25;
+  $pi = 3.14;
   
-  // double qoute for puting var into string
-  // echo "Hey, my name is $name";
-  
+  // basic operator - , + , / , * , ** (power of / times)
 
-  // double quoute for skipping use.
-  // echo "What's your name , \"dude\" ? ";
+  // echo $pi * $radius;
 
-  // finding certain char into string 
-  // echo $name[0] // start index char 0
+  // order of operation ( B I D M A S )
 
-  // string function
-  // echo strlen($name);
-  
-  // string function
-  // echo strtoupper($name);
-  
-  // echo strtolower($name);
-  
-  echo str_replace('M', 's', $name);
+  // echo 2 * ( 4 + 9 ) / 3;
+
+  // increment and decrement operator 
+  // echo $radius++;
+
+  // shorthand operator 
+  // $age = 20;
+  // $age += 20;
+  // $age -= 20;
+  // echo $age;
+
+  // number functions 
+  // echo floor($pi)
+
+  // echo ceil($pi);
+  echo pi();
+
   
   // echo use to print out code 
   // echo "My first PHP code in the browser.";
