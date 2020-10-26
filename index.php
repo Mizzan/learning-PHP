@@ -1,65 +1,50 @@
 <?php 
-  // Array ( indexed array )
-  
-  $peopleOne = ['mizan', 'messi', 'ryu', 'saitama'];
-  $peopleTwo = array('goku','vageta', 'kensye');
-  
-  // echo $peopleOne[2];
-  // echo $peopleTwo[1];
-
-  // echo array using print_r
-  $ages = [20, 30, 23, 50];
-  // print_r($ages);
-  
-  // overwriting value
-  $ages[1] = 99;
-  // print_r($ages);
-
-
-  // adding value
-  $ages[] = 999;
-  // print_r($ages);
-
-  // adding value
-  array_push($ages, 444);
-  // print_r($ages);
+  // For loops
   
   
-  // count value
-  // echo count($ages);
-  
+  // for($i = 0; $i < 5; $i++) {
+  // echo 'some code';
+  // }
 
-  // removing value
-  array_pop($ages);
-  // print_r($ages);
-  
-  // merging array
-  $peopleThree = array_merge($peopleOne, $peopleTwo);
-  // print_r($peopleThree);
+  $players = ['messi', 'suarez', 'neymar'];
+
+  // for($i = 0; $i < count($players); $i++) {
+  //   echo $players[$i] . '<br />';
+  // }
+
+  // using foreach
+  // foreach($players as $player) {
+  //   echo $player . '<br />';
+  // }
+
+  $products = [
+    ['name' => 'shiny star', 'price' => 11],
+    ['name' => 'green shell', 'price' => 33],
+    ['name' => 'red shell', 'price' => 21],
+    ['name' => 'gold coin', 'price' => 45],
+    ['name' => 'lightning bolt', 'price' => 35],
+    ['name' => 'banana skin', 'price' => 16],
+  ];
+
+  // foreach ( array looping)
+  // foreach($blogs as $blog) {
+    // echo 'some template';
+  //   // }
+  // foreach($products as $product) {
+  //   echo $product['name'] ." - ". $product['price'] . '<br>';
+  // }
+
+  // while loop
+
+  // $i = 0;
+
+  // while($i < count($products)) {
+  //   echo $products[$i]['name'] . " - " . $products[$i]['price'];
+  //   echo '<br>';
+  //   $i++;
+  // }
 
 
-
-  // Array ( associative array ) other name key value pair
-
-  $ufcPlayer = ['khabib' => 'lightweight', 'tony ferguson' => 'lightweight', 'khamzat' => "middleweight"];
-  // print_r($ufcPlayer);
-  // echo $ufcPlayer['khamzat'];
-  
-  
-  // adding new value pair
-  $ufcPlayer['stipe'] = 'heavyweight';
-  // print_r($ufcPlayer);
-
-  // overwriting  value pair
-  $ufcPlayer['stipe'] = 'bantamweight';
-  // print_r($ufcPlayer);
-  
-  // echo count($ufcPlayer);
-
-  
-  // merging array
-  $arrayMerge = array_merge($peopleTwo, $ufcPlayer);
-  print_r($arrayMerge);
 
 
   
@@ -77,6 +62,16 @@
   <title>String</title>
 </head>
 <body>
-  <h1>PHP String</h1>
+  <h1>Products</h1>
+    
+    
+    <ul>
+    <!-- this is a php template  -->
+      <?php foreach($products as $product) { ?>
+        <h3><?php echo $product['name']; ?></h3>
+        <p>💰 <?php echo $product['price']; ?></p>
+      <?php } ?>
+    </ul>
+
 </body>
 </html>
