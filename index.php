@@ -1,31 +1,66 @@
 <?php 
-  // Numbers ( integer, float) 
-
-  $radius = 25;
-  $pi = 3.14;
+  // Array ( indexed array )
   
-  // basic operator - , + , / , * , ** (power of / times)
+  $peopleOne = ['mizan', 'messi', 'ryu', 'saitama'];
+  $peopleTwo = array('goku','vageta', 'kensye');
+  
+  // echo $peopleOne[2];
+  // echo $peopleTwo[1];
 
-  // echo $pi * $radius;
+  // echo array using print_r
+  $ages = [20, 30, 23, 50];
+  // print_r($ages);
+  
+  // overwriting value
+  $ages[1] = 99;
+  // print_r($ages);
 
-  // order of operation ( B I D M A S )
 
-  // echo 2 * ( 4 + 9 ) / 3;
+  // adding value
+  $ages[] = 999;
+  // print_r($ages);
 
-  // increment and decrement operator 
-  // echo $radius++;
+  // adding value
+  array_push($ages, 444);
+  // print_r($ages);
+  
+  
+  // count value
+  // echo count($ages);
+  
 
-  // shorthand operator 
-  // $age = 20;
-  // $age += 20;
-  // $age -= 20;
-  // echo $age;
+  // removing value
+  array_pop($ages);
+  // print_r($ages);
+  
+  // merging array
+  $peopleThree = array_merge($peopleOne, $peopleTwo);
+  // print_r($peopleThree);
 
-  // number functions 
-  // echo floor($pi)
 
-  // echo ceil($pi);
-  echo pi();
+
+  // Array ( associative array ) other name key value pair
+
+  $ufcPlayer = ['khabib' => 'lightweight', 'tony ferguson' => 'lightweight', 'khamzat' => "middleweight"];
+  // print_r($ufcPlayer);
+  // echo $ufcPlayer['khamzat'];
+  
+  
+  // adding new value pair
+  $ufcPlayer['stipe'] = 'heavyweight';
+  // print_r($ufcPlayer);
+
+  // overwriting  value pair
+  $ufcPlayer['stipe'] = 'bantamweight';
+  // print_r($ufcPlayer);
+  
+  // echo count($ufcPlayer);
+
+  
+  // merging array
+  $arrayMerge = array_merge($peopleTwo, $ufcPlayer);
+  print_r($arrayMerge);
+
 
   
   // echo use to print out code 
