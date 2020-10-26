@@ -1,17 +1,41 @@
 <?php 
-  // var can not start with number and special char 
-  // can be start with letter and _ (underscore), camelCase, Capital Letter
+  // string 
+  $stringOne = 'my email is ';
+  $stringTwo = 'noobinphp@gmail.com';
 
-  $aSimpleVar = 'Hello World by PHP';
-  $aNumber = 40;
+  // concatinate the string
+  // echo $stringOne .  $stringTwo;
+
+
+  // concatinate with string
+  $name = 'Mizan';
+
+  // echo 'Hey, my name is ' . $name;
   
-  // Constant 
-  define('NAME', "Mizan");
+  // double qoute for puting var into string
+  // echo "Hey, my name is $name";
+  
 
+  // double quoute for skipping use.
+  // echo "What's your name , \"dude\" ? ";
+
+  // finding certain char into string 
+  // echo $name[0] // start index char 0
+
+  // string function
+  // echo strlen($name);
+  
+  // string function
+  // echo strtoupper($name);
+  
+  // echo strtolower($name);
+  
+  echo str_replace('M', 's', $name);
+  
   // echo use to print out code 
-  echo "My first PHP code in the browser.";
-  // always use semicolon;
-  echo "My first PHP code in the browser.";
+  // echo "My first PHP code in the browser.";
+  // // always use semicolon;
+  // echo "My first PHP code in the browser.";
 ?>
 
 <!DOCTYPE html>
@@ -19,11 +43,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First PHP file</title>
+  <title>String</title>
 </head>
 <body>
-  <h1><?php echo $aSimpleVar; ?></h1>
-  <h3><?php echo $aNumber; ?></h3>
-  <p><?php echo NAME; ?></p>
+  <h1>PHP String</h1>
 </body>
 </html>
